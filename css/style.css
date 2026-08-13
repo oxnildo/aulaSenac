@@ -1,0 +1,128 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.card {
+    width: 300px;
+    padding: var(--espacamento-medio);
+    background-color: var(--cor-card);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-borda);
+    
+    
+
+
+}
+.card:hover{
+    background-color: green ;
+    color: var(--cor-texto-calro);
+}
+
+body {
+    margin: 0;
+    /*Remover o epaço padrão*/
+    font-family: Arial, Helvetica, sans-serif;
+    /*Nossa fonte*/
+    color: var(--cor-texto);
+    /*A cor padrão dos textos*/
+    background-color: var(--cor-fundo);
+    /*Define a cor do fundo*/
+
+    line-height: 1.6;
+    /*Aumenta o espaçamento das linhas*/
+
+}
+
+.container {
+    width: 90%;
+     /*o conteudo vai ocupar 90% do espaço disponivel*/
+    max-width: 1200px;
+     /*pode ocupar 90% ATÉ 1200px*/
+    margin-left: auto;
+     /*margen da esquerda com ajuste automatico*/
+    margin-right: auto;
+     /*margen da direita com ajuste automatico*/
+ 
+}
+
+.cabecalho{
+    background-color: var(--cor-primaria);
+    /*cor do fundo*/
+    color: var(--cor-texto-calro);
+    /*cor da letra*/
+    padding: var(--espacamento-medio);
+    /*margem */
+}
+
+.nav{
+    display: flex;
+    /**/
+     flex-direction: column;
+    /**/
+      gap: var(--espacamento-pequeno);
+    /**/
+}
+.nav a{
+    color: white;
+    text-decoration: none;
+
+    padding: 0.75ren 1ren;
+
+    border-radius: var(--raio-borda);
+
+}
+
+.nav a:hover{
+    background-color: var(--cor-secundaria);
+}
+
+.nav .ativo{
+    background-color: var(--cor-secundaria);
+}
+
+.secao{
+    padding: var(--espacamento-grande);
+}
+
+h1 {
+    font-family: Arial;
+}
+
+h2 {
+    font-family: Arial;
+}
+
+p {
+    font-family: Arial;
+}
+
+a {
+    font-family: Arial;
+    color: var(--cor-texto);
+}
+
+footer{
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-calro);
+}
+
+:root {
+    --cor-primaria: #5b3cc4;
+    --cor-secundaria: #432b98;
+
+    --cor-fundo: #e0dddd;
+    --cor-card: #ffffff;
+
+    --cor-texto: #222222;
+    --cor-texto-calro: #ffffff;
+
+    --cor-borda: #dddddd;
+
+    --espacamento-pequeno: 0.5rem;
+    --espacamento-medio: 1rem;
+    --espacamento-grande: 2rem;
+
+    --raio-borda: 8px;
+}
