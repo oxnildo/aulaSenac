@@ -10,14 +10,30 @@
     background-color: var(--cor-card);
     border: 1px solid var(--cor-borda);
     border-radius: var(--raio-borda);
-    
-    
-
 
 }
 .card:hover{
     background-color: green ;
     color: var(--cor-texto-calro);
+    transform: translate(4px);
+}
+
+.grid-cards{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--espacamento-medio);
+}
+
+.aviso{
+    /* margen fora*/
+    margin: var(--espacamento-grande);
+    /*margen dentro*/
+    padding: var(--espacamento-medio);
+    /* a borda esquerda*/
+    border-left: 4px solid var(--cor-primaria) ;
+
+    background-color: #dec4ec;
+
 }
 
 body {
@@ -38,6 +54,7 @@ body {
 .container {
     width: 90%;
      /*o conteudo vai ocupar 90% do espaço disponivel*/
+  
     max-width: 1200px;
      /*pode ocupar 90% ATÉ 1200px*/
     margin-left: auto;
@@ -63,6 +80,7 @@ body {
     /**/
       gap: var(--espacamento-pequeno);
     /**/
+    padding: 1PX;
 }
 .nav a{
     color: white;
@@ -76,14 +94,22 @@ body {
 
 .nav a:hover{
     background-color: var(--cor-secundaria);
+   
 }
 
 .nav .ativo{
     background-color: var(--cor-secundaria);
+    margin-left: -10px;
+
+    
 }
 
 .secao{
     padding: var(--espacamento-grande);
+}
+.secao_contato{
+    padding: var(--espacamento-grande);
+    min-height: 600px;
 }
 
 h1 {
@@ -103,10 +129,93 @@ a {
     color: var(--cor-texto);
 }
 
+.formulario{
+    background-color: white;
+    padding: var(--espacamento-medio);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-borda);
+    min-height: 250px;
+}
+
+.campo{
+    margin-bottom: var(--espacamento-medio);
+}
+.campo label{
+    display: block;
+    margin-top: var(--espacamento-pequeno);
+    font-weight: bold;
+}
+
+.campo input,
+.campo textarea{
+    width: 100%;
+    padding: 0,75rem;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-borda);
+    font-size: 1rem;
+}
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible{
+    outline: 3px solid var(--cor-secundaria);
+    outline-offset: 3px;    
+}
+
+.btn{
+    width: 100%;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: var(--raio-borda);
+    background-color: var(--cor-primaria);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: var(--cor-secundaria);
+}
 footer{
+    margin-top: var(--espacamento-grande);
+    padding: var(--espacamento-medio);
     background-color: var(--cor-primaria);
     color: var(--cor-texto-calro);
+    border-left: #432b98;
 }
+.form-row{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--espacamento-medio);
+}
+
+/*################################################################
+                      RESPONSIVIDADE EM ROSA
+##################################################################*/
+@media(min-width: 768px){
+    .nav{
+        flex-direction: row;
+        padding: 0px;
+    }
+    .nav .ativo{
+        margin-left: 0px;
+
+    }
+    .form-row{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .btn{
+        width: auto;
+    }
+}
+
+@media(min-width: 1024px){
+    .grid-cards{
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    }
+
 
 :root {
     --cor-primaria: #5b3cc4;
