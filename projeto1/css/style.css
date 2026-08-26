@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+
+
 .card {
     width: 300px;
     padding: var(--espacamento-medio);

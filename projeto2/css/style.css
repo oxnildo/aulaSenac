@@ -1,0 +1,205 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.card {
+    width: 300px;
+    padding: var(--espacamento-medio);
+    background-color: var(--cor-card);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-borda);
+
+}
+.card:hover{
+    background-color: green ;
+    color: var(--cor-texto-calro);
+    transform: translate(4px);
+}
+
+.grid-cards{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--espacamento-medio);
+}
+
+.aviso{
+    /* margen fora*/
+    margin: var(--espacamento-grande);
+    /*margen dentro*/
+    padding: var(--espacamento-medio);
+    /* a borda esquerda*/
+    border-left: 4px solid var(--cor-primaria) ;
+
+    background-color: #79e779;
+
+}
+
+body {
+    margin: 0;
+    /*Remover o epaço padrão*/
+    font-family: Arial, Helvetica, sans-serif;
+    /*Nossa fonte*/
+    color: var(--cor-texto);
+    /*A cor padrão dos textos*/
+    background-color: var(--cor-fundo);
+    /*Define a cor do fundo*/
+
+    line-height: 1.6;
+    /*Aumenta o espaçamento das linhas*/
+
+}
+
+.container {
+    width: 90%;
+     /*o conteudo vai ocupar 90% do espaço disponivel*/
+  
+    max-width: 1200px;
+     /*pode ocupar 90% ATÉ 1200px*/
+    margin-left: auto;
+     /*margen da esquerda com ajuste automatico*/
+    margin-right: auto;
+     /*margen da direita com ajuste automatico*/
+ 
+}
+
+.cabecalho{
+    background-color: var(--cor-primaria);
+    /*cor do fundo*/
+    color: var(--cor-texto-calro);
+    /*cor da letra*/
+    padding: var(--espacamento-medio);
+    /*margem */
+}
+
+.nav{
+    display: flex;
+    /**/
+     flex-direction: column;
+    /**/
+      gap: var(--espacamento-pequeno);
+    /**/
+    padding: 1PX;
+}
+.nav a{
+    color: white;
+    text-decoration: none;
+
+    padding: 0.75ren 1ren;
+
+    border-radius: var(--raio-borda);
+
+}
+
+.nav a:hover{
+    background-color: var(--cor-secundaria);
+   
+}
+
+.nav .ativo{
+    background-color: var(--cor-secundaria);
+    margin-left: -10px;
+
+    
+}
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-image: url(https://th.bing.com/th/id/OIP.YqTUWeISjzBxFnCGxZpMsAHaE7?w=285&h=189&c=7&r=0&o=7&pid=1.7&rm=3);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    }
+
+.secao{
+    padding: var(--espacamento-grande);
+ 
+}
+.secao_contato{
+    padding: var(--espacamento-grande);
+    min-height: 600px;
+}
+
+h1 {
+    font-family: Arial;
+    color: var(--cor-card);
+}
+
+h2 {
+    font-family: Arial;
+    color: var(--cor-card);
+}
+
+p {
+    font-family: Arial;
+}
+
+a {
+    font-family: Arial;
+    color: var(--cor-texto);
+}
+
+
+
+
+footer{
+    margin-top: var(--espacamento-grande);
+    padding: var(--espacamento-medio);
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-calro);
+    border-left: #432b98;
+}
+.form-row{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--espacamento-medio);
+}
+
+/*################################################################
+                      RESPONSIVIDADE EM ROSA
+##################################################################*/
+@media(min-width: 768px){
+    .nav{
+        flex-direction: row;
+        padding: 0px;
+    }
+    .nav .ativo{
+        margin-left: 0px;
+
+    }
+    .form-row{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .btn{
+        width: auto;
+    }
+}
+
+@media(min-width: 1024px){
+    .grid-cards{
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    }
+
+
+:root {
+    --cor-primaria: #0f9236;
+    --cor-secundaria: #056114;
+
+    --cor-fundo: #e0dddd;
+    --cor-card: #ffffff;
+
+    --cor-texto: #222222;
+    --cor-texto-calro: #ffffff;
+
+    --cor-borda: #dddddd;
+
+    --espacamento-pequeno: 0.5rem;
+    --espacamento-medio: 1rem;
+    --espacamento-grande: 2rem;
+
+    --raio-borda: 8px;
+}
