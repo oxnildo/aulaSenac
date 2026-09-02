@@ -4,16 +4,13 @@
 <head>
     <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Aula 04 - CSS Mobile-First</title>
 
     <link rel="stylesheet" href="css/style.css">
 
-    <script src="js/script.js" defer></script>
+    <script src="js/app.js" defer></script>
 </head>
 
 <body>
@@ -24,15 +21,9 @@
 
             <h1>Meu Projeto Web</h1>
 
-            <nav
-                class="nav"
-                aria-label="Navegação principal"
-            >
+            <nav class="nav" aria-label="Navegação principal">
 
-                <a
-                    class="ativo"
-                    href="index.html"
-                >
+                <a class="ativo" href="index.html">
                     Início
                 </a>
 
@@ -112,6 +103,37 @@
 
         </section>
 
+        <section class="secao" id="projetos">
+            <h2>Projetos desenvolvidos</h2>
+            <div class="campo busca">
+                <Label for="busca">
+                    Buscar projeto
+                </Label>
+
+                <input type="search" id="buscar" placeholder="Digite HTML ou CSS">
+            </div>
+
+            <p id="status" role="status" aria-live="polite">
+                3 projetos encontrados
+            </p>
+            <div class="filtros">
+
+                <button type="button" class="btn-filtro ativo" data-filtro="todos">
+                    Todos
+                </button>
+
+                <button type="button" class="btn-filtro" data-filtro="html">
+                    HTML
+                </button>
+
+                <button type="button" class="btn-filtro" data-filtro="css">
+                    CSS
+                </button>
+
+
+            </div>
+
+        </section>
 
         <aside class="aviso">
 
@@ -141,4 +163,5 @@
     </footer>
 
 </body>
+
 </html>

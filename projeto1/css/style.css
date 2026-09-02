@@ -190,7 +190,54 @@ footer{
     grid-template-columns: 1fr;
     gap: var(--espacamento-medio);
 }
+/*################################################################
+                      java style
+##################################################################*/
+/*buscar*/
+.campo-busca{
+    margin-bottom: var(--espacamento-medio);
+}
+.campo-busca label{
+    display: block;
+    margin-bottom: var(--espacamento-pequeno);
+    font-weight: bold;
+}
+.campo-busca input{
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-borda);
+    font-size: 1rem;
+}
+/*status*/
+.status{
+    margin: 0 0 var(--espacamento-medio);
+    color: var(--cor-texto-suave);
+}
+/*filtros*/
+.filtros{
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--espacamento-pequeno);
+    margin-bottom: var(--espacamento-grande);
+}
 
+.btn-filtro{
+    flex: 1 1 120px;
+    padding: 0.7rem 1rem;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-borda);
+    background-color: var(--cor-card);
+    color: var(--cor-texto);
+    cursor: pointer;
+}
+
+.btn-filtro :hover,
+.btn-filtro.ativo{
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-calro);
+    border-color: var(--cor-primaria);
+}
 /*################################################################
                       RESPONSIVIDADE EM ROSA
 ##################################################################*/
@@ -228,6 +275,7 @@ footer{
 
     --cor-texto: #222222;
     --cor-texto-calro: #ffffff;
+    --cor-texto-suave: #666666;
 
     --cor-borda: #dddddd;
 
