@@ -15,7 +15,7 @@
 
 }
 .card:hover{
-    background-color: green ;
+    background-color: rgb(23, 4, 77) ;
     color: var(--cor-texto-calro);
     transform: translate(4px);
 }
@@ -232,11 +232,36 @@ footer{
     cursor: pointer;
 }
 
-.btn-filtro :hover,
+.btn-filtro:hover,
 .btn-filtro.ativo{
     background-color: var(--cor-primaria);
     color: var(--cor-texto-calro);
     border-color: var(--cor-primaria);
+}
+/* cards  da pesquisa*/
+.projeto-card{
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    gap: var(--espacamento-medio);
+    padding: var(--espacamento-medio);
+    background-color: var(--cor-card);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-borda);
+    box-shadow: var(--sombra-card);
+    transition: transform 0.2s;
+}
+
+.projeto-card:hover{
+    transform: translateY(-4px);
+}
+
+.projeto-card h3,
+.projeto-card p{
+    margin: 0;
+}
+.projeto-card p{
+    color: var(--cor-texto-suave);
 }
 /*################################################################
                       RESPONSIVIDADE EM ROSA
@@ -278,6 +303,7 @@ footer{
     --cor-texto-suave: #666666;
 
     --cor-borda: #dddddd;
+    --sombra-card: 0 4px 14px rgb(23, 4, 77) ;
 
     --espacamento-pequeno: 0.5rem;
     --espacamento-medio: 1rem;
