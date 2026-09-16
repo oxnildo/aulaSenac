@@ -13,14 +13,14 @@
 
     <link rel="stylesheet" href="css/style.css">
 
-    <script src="js/app.js" defer></script>
+    <script src="js/script.js" defer></script>
 </head>
 
 <body>
 
     <header class="cabecalho">
 
-        <div class="container">
+        <div class="container cabecalho-conteudo">
 
             <h1>Meu Projeto Web</h1>
 
@@ -36,6 +36,7 @@
                 <a
                     class="ativo"
                     href="sobre.html"
+                    aria-current="page"
                 >
                     Sobre
                 </a>
@@ -73,10 +74,15 @@
                 </p>
 
                 <p>
-                    Agora estamos utilizando CSS para
-                    trabalhar cores, espaçamentos,
-                    Box Model, layouts fluidos e
-                    responsividade.
+                    Depois adicionamos CSS, Box Model,
+                    layout fluido, Mobile-First,
+                    Flexbox, Grid e acessibilidade.
+                </p>
+
+                <p>
+                    Agora o projeto também utiliza
+                    JavaScript para adicionar
+                    comportamento e interatividade.
                 </p>
 
             </article>
@@ -91,27 +97,37 @@
             <div class="grid-cards">
 
                 <article class="card">
+
                     <h3>HTML</h3>
+
                     <p>
                         Responsável pela estrutura
-                        e conteúdo da página.
+                        e pelo conteúdo da página.
                     </p>
+
                 </article>
 
                 <article class="card">
+
                     <h3>CSS</h3>
+
                     <p>
                         Responsável pela aparência,
                         layout e responsividade.
                     </p>
+
                 </article>
 
                 <article class="card">
+
                     <h3>JavaScript</h3>
+
                     <p>
-                        Será utilizado para adicionar
-                        comportamento e interatividade.
+                        Responsável pelos filtros,
+                        busca, seleção e validação
+                        do formulário.
                     </p>
+
                 </article>
 
             </div>
@@ -124,10 +140,12 @@
     <footer class="rodape">
 
         <div class="container">
+
             <p>
                 Desenvolvido durante as aulas -
                 SENAC.
             </p>
+
         </div>
 
     </footer>

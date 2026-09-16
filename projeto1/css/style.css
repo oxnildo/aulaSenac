@@ -1,3 +1,7 @@
+/* =====================================
+   CONFIGURAÇÕES GERAIS
+===================================== */
+
 *,
 *::before,
 *::after {
@@ -5,309 +9,609 @@
 }
 
 
-
-.card {
-    width: 300px;
-    padding: var(--espacamento-medio);
-    background-color: var(--cor-card);
-    border: 1px solid var(--cor-borda);
-    border-radius: var(--raio-borda);
-
-}
-.card:hover{
-    background-color: rgb(23, 4, 77) ;
-    color: var(--cor-texto-calro);
-    transform: translate(4px);
-}
-
-.grid-cards{
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--espacamento-medio);
-}
-
-.aviso{
-    /* margen fora*/
-    margin: var(--espacamento-grande);
-    /*margen dentro*/
-    padding: var(--espacamento-medio);
-    /* a borda esquerda*/
-    border-left: 4px solid var(--cor-primaria) ;
-
-    background-color: #dec4ec;
-
-}
-
-body {
-    margin: 0;
-    /*Remover o epaço padrão*/
-    font-family: Arial, Helvetica, sans-serif;
-    /*Nossa fonte*/
-    color: var(--cor-texto);
-    /*A cor padrão dos textos*/
-    background-color: var(--cor-fundo);
-    /*Define a cor do fundo*/
-
-    line-height: 1.6;
-    /*Aumenta o espaçamento das linhas*/
-
-}
-
-.container {
-    width: 90%;
-     /*o conteudo vai ocupar 90% do espaço disponivel*/
-  
-    max-width: 1200px;
-     /*pode ocupar 90% ATÉ 1200px*/
-    margin-left: auto;
-     /*margen da esquerda com ajuste automatico*/
-    margin-right: auto;
-     /*margen da direita com ajuste automatico*/
- 
-}
-
-.cabecalho{
-    background-color: var(--cor-primaria);
-    /*cor do fundo*/
-    color: var(--cor-texto-calro);
-    /*cor da letra*/
-    padding: var(--espacamento-medio);
-    /*margem */
-}
-
-.nav{
-    display: flex;
-    /**/
-     flex-direction: column;
-    /**/
-      gap: var(--espacamento-pequeno);
-    /**/
-    padding: 1PX;
-}
-.nav a{
-    color: white;
-    text-decoration: none;
-
-    padding: 0.75ren 1ren;
-
-    border-radius: var(--raio-borda);
-
-}
-
-.nav a:hover{
-    background-color: var(--cor-secundaria);
-   
-}
-
-.nav .ativo{
-    background-color: var(--cor-secundaria);
-    margin-left: -10px;
-
-    
-}
-
-.secao{
-    padding: var(--espacamento-grande);
-}
-.secao_contato{
-    padding: var(--espacamento-grande);
-    min-height: 600px;
-}
-
-h1 {
-    font-family: Arial;
-}
-
-h2 {
-    font-family: Arial;
-}
-
-p {
-    font-family: Arial;
-}
-
-a {
-    font-family: Arial;
-    color: var(--cor-texto);
-}
-
-.formulario{
-    background-color: white;
-    padding: var(--espacamento-medio);
-    border: 1px solid var(--cor-borda);
-    border-radius: var(--raio-borda);
-    min-height: 250px;
-}
-
-.campo{
-    margin-bottom: var(--espacamento-medio);
-}
-.campo label{
-    display: block;
-    margin-top: var(--espacamento-pequeno);
-    font-weight: bold;
-}
-
-.campo input,
-.campo textarea{
-    width: 100%;
-    padding: 0,75rem;
-    border: 1px solid var(--cor-borda);
-    border-radius: var(--raio-borda);
-    font-size: 1rem;
-}
-a:focus-visible,
-button:focus-visible,
-input:focus-visible,
-textarea:focus-visible{
-    outline: 3px solid var(--cor-secundaria);
-    outline-offset: 3px;    
-}
-
-.btn{
-    width: 100%;
-    padding: 0.8rem 1.2rem;
-    border: none;
-    border-radius: var(--raio-borda);
-    background-color: var(--cor-primaria);
-    color: white;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-.btn:hover{
-    background-color: var(--cor-secundaria);
-}
-footer{
-    margin-top: var(--espacamento-grande);
-    padding: var(--espacamento-medio);
-    background-color: var(--cor-primaria);
-    color: var(--cor-texto-calro);
-    border-left: #432b98;
-}
-.form-row{
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--espacamento-medio);
-}
-/*################################################################
-                      java style
-##################################################################*/
-/*buscar*/
-.campo-busca{
-    margin-bottom: var(--espacamento-medio);
-}
-.campo-busca label{
-    display: block;
-    margin-bottom: var(--espacamento-pequeno);
-    font-weight: bold;
-}
-.campo-busca input{
-    width: 100%;
-    padding: 0.75rem;
-    border: 1px solid var(--cor-borda);
-    border-radius: var(--raio-borda);
-    font-size: 1rem;
-}
-/*status*/
-.status{
-    margin: 0 0 var(--espacamento-medio);
-    color: var(--cor-texto-suave);
-}
-/*filtros*/
-.filtros{
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--espacamento-pequeno);
-    margin-bottom: var(--espacamento-grande);
-}
-
-.btn-filtro{
-    flex: 1 1 120px;
-    padding: 0.7rem 1rem;
-    border: 1px solid var(--cor-borda);
-    border-radius: var(--raio-borda);
-    background-color: var(--cor-card);
-    color: var(--cor-texto);
-    cursor: pointer;
-}
-
-.btn-filtro:hover,
-.btn-filtro.ativo{
-    background-color: var(--cor-primaria);
-    color: var(--cor-texto-calro);
-    border-color: var(--cor-primaria);
-}
-/* cards  da pesquisa*/
-.projeto-card{
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    gap: var(--espacamento-medio);
-    padding: var(--espacamento-medio);
-    background-color: var(--cor-card);
-    border: 1px solid var(--cor-borda);
-    border-radius: var(--raio-borda);
-    box-shadow: var(--sombra-card);
-    transition: transform 0.2s;
-}
-
-.projeto-card:hover{
-    transform: translateY(-4px);
-}
-
-.projeto-card h3,
-.projeto-card p{
-    margin: 0;
-}
-.projeto-card p{
-    color: var(--cor-texto-suave);
-}
-/*################################################################
-                      RESPONSIVIDADE EM ROSA
-##################################################################*/
-@media(min-width: 768px){
-    .nav{
-        flex-direction: row;
-        padding: 0px;
-    }
-    .nav .ativo{
-        margin-left: 0px;
-
-    }
-    .form-row{
-        grid-template-columns: repeat(2,1fr);
-    }
-    .btn{
-        width: auto;
-    }
-}
-
-@media(min-width: 1024px){
-    .grid-cards{
-        grid-template-columns: repeat(3,1fr);
-    }
-
-    }
-
+/* =====================================
+   VARIÁVEIS
+===================================== */
 
 :root {
     --cor-primaria: #5b3cc4;
     --cor-secundaria: #432b98;
 
-    --cor-fundo: #e0dddd;
+    --cor-fundo: #f5f5f5;
     --cor-card: #ffffff;
 
     --cor-texto: #222222;
-    --cor-texto-calro: #ffffff;
     --cor-texto-suave: #666666;
+    --cor-texto-claro: #ffffff;
 
     --cor-borda: #dddddd;
-    --sombra-card: 0 4px 14px rgb(23, 4, 77) ;
+    --cor-destaque: #eee9ff;
+    --cor-foco: #ffbf47;
+
+    --cor-erro: #b00020;
+    --cor-sucesso: #146c2e;
 
     --espacamento-pequeno: 0.5rem;
     --espacamento-medio: 1rem;
     --espacamento-grande: 2rem;
+    --espacamento-extra: 3rem;
 
     --raio-borda: 8px;
+
+    --sombra-card:
+        0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =====================================
+   BODY
+===================================== */
+
+body {
+    margin: 0;
+
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================
+   ELEMENTOS GERAIS
+===================================== */
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+h1 {
+    font-size:
+        clamp(
+            1.5rem,
+            5vw,
+            2.5rem
+        );
+}
+
+a {
+    color: inherit;
+}
+
+
+/* =====================================
+   CONTAINER
+===================================== */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+
+/* =====================================
+   CABEÇALHO
+===================================== */
+
+.cabecalho {
+    padding:
+        var(--espacamento-medio)
+        0;
+
+    background-color:
+        var(--cor-primaria);
+
+    color:
+        var(--cor-texto-claro);
+}
+
+.cabecalho h1 {
+    margin: 0;
+}
+
+.cabecalho-conteudo {
+    display: flex;
+    flex-direction: column;
+
+    gap:
+        var(--espacamento-medio);
+}
+
+
+/* =====================================
+   NAVEGAÇÃO
+===================================== */
+
+.nav {
+    display: flex;
+    flex-direction: column;
+
+    gap:
+        var(--espacamento-pequeno);
+}
+
+.nav a {
+    padding:
+        0.75rem
+        1rem;
+
+    color:
+        var(--cor-texto-claro);
+
+    text-decoration: none;
+
+    border-radius:
+        var(--raio-borda);
+}
+
+.nav a:hover,
+.nav .ativo {
+    background-color:
+        var(--cor-secundaria);
+}
+
+
+/* =====================================
+   SEÇÕES
+===================================== */
+
+.secao {
+    padding:
+        var(--espacamento-grande)
+        0;
+}
+
+.secao-cabecalho {
+    display: flex;
+    flex-direction: column;
+
+    gap:
+        var(--espacamento-medio);
+
+    margin-bottom:
+        var(--espacamento-medio);
+}
+
+.secao-cabecalho h2 {
+    margin: 0;
+}
+
+.contador-projetos {
+    color:
+        var(--cor-texto-suave);
+
+    font-weight: bold;
+}
+
+.tag {
+    margin: 0;
+
+    color:
+        var(--cor-primaria);
+
+    font-weight: bold;
+}
+
+
+/* =====================================
+   GRID / CARDS
+===================================== */
+
+.grid-cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(220px, 1fr)
+        );
+
+    gap:
+        var(--espacamento-medio);
+}
+
+.card {
+    padding:
+        var(--espacamento-medio);
+
+    background-color:
+        var(--cor-card);
+
+    border:
+        1px solid
+        var(--cor-borda);
+
+    border-radius:
+        var(--raio-borda);
+
+    box-shadow:
+        var(--sombra-card);
+}
+
+.projeto-card {
+    display: flex;
+    flex-direction: column;
+
+    gap:
+        var(--espacamento-medio);
+
+    transition:
+        transform
+        0.2s;
+}
+
+.projeto-card:hover {
+    transform:
+        translateY(-4px);
+}
+
+.projeto-card.selecionado {
+    border:
+        2px solid
+        var(--cor-primaria);
+}
+
+
+/* =====================================
+   AVISO
+===================================== */
+
+.aviso {
+    margin:
+        var(--espacamento-grande)
+        0;
+
+    padding:
+        var(--espacamento-medio);
+
+    background-color:
+        var(--cor-destaque);
+
+    border-left:
+        4px solid
+        var(--cor-primaria);
+
+    border-radius:
+        var(--raio-borda);
+}
+
+
+/* =====================================
+   BUSCA / FILTROS - AULA 07
+===================================== */
+
+.campo-busca {
+    margin-bottom:
+        var(--espacamento-medio);
+}
+
+.campo-busca label {
+    display: block;
+
+    margin-bottom:
+        var(--espacamento-pequeno);
+
+    font-weight: bold;
+}
+
+.campo-busca input {
+    width: 100%;
+
+    padding:
+        0.75rem;
+
+    border:
+        1px solid
+        var(--cor-borda);
+
+    border-radius:
+        var(--raio-borda);
+
+    font-size: 1rem;
+}
+
+.status {
+    margin:
+        0
+        0
+        var(--espacamento-medio);
+
+    color:
+        var(--cor-texto-suave);
+}
+
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap:
+        var(--espacamento-pequeno);
+
+    margin-bottom:
+        var(--espacamento-grande);
+}
+
+.btn-filtro,
+.btn-selecionar {
+    padding:
+        0.7rem
+        1rem;
+
+    border:
+        1px solid
+        var(--cor-borda);
+
+    border-radius:
+        var(--raio-borda);
+
+    background-color:
+        var(--cor-card);
+
+    color:
+        var(--cor-texto);
+
+    cursor: pointer;
+}
+
+.btn-filtro:hover,
+.btn-filtro.ativo,
+.btn-selecionar:hover,
+.btn-selecionar[aria-pressed="true"] {
+    background-color:
+        var(--cor-primaria);
+
+    color:
+        var(--cor-texto-claro);
+
+    border-color:
+        var(--cor-primaria);
+}
+
+.btn-selecionar {
+    margin-top: auto;
+}
+
+.escondido {
+    display: none;
+}
+
+
+/* =====================================
+   FORMULÁRIO
+===================================== */
+
+.formulario {
+    padding:
+        var(--espacamento-medio);
+
+    background-color:
+        var(--cor-card);
+
+    border:
+        1px solid
+        var(--cor-borda);
+
+    border-radius:
+        var(--raio-borda);
+}
+
+.form-row {
+    display: grid;
+
+    grid-template-columns:
+        1fr;
+
+    gap:
+        var(--espacamento-medio);
+}
+
+.campo {
+    margin-bottom:
+        var(--espacamento-medio);
+}
+
+.campo label {
+    display: block;
+
+    margin-bottom:
+        var(--espacamento-pequeno);
+
+    font-weight: bold;
+}
+
+.campo input,
+.campo textarea,
+.campo select {
+    width: 100%;
+
+    padding:
+        0.75rem;
+
+    border:
+        1px solid
+        var(--cor-borda);
+
+    border-radius:
+        var(--raio-borda);
+
+    font-size:
+        1rem;
+}
+
+.campo textarea {
+    resize: vertical;
+}
+
+
+/* =====================================
+   BOTÃO PRINCIPAL
+===================================== */
+
+.btn {
+    width: 100%;
+
+    padding:
+        0.8rem
+        1.2rem;
+
+    border: none;
+
+    border-radius:
+        var(--raio-borda);
+
+    background-color:
+        var(--cor-primaria);
+
+    color:
+        var(--cor-texto-claro);
+
+    font-size:
+        1rem;
+
+    cursor:
+        pointer;
+}
+
+.btn:hover {
+    background-color:
+        var(--cor-secundaria);
+}
+
+
+/* =====================================
+   VALIDAÇÃO - AULA 08
+===================================== */
+
+.mensagem-erro {
+    display: block;
+
+    min-height:
+        1.3em;
+
+    margin-top:
+        0.3rem;
+
+    color:
+        var(--cor-erro);
+
+    font-size:
+        0.9rem;
+}
+
+.campo input.erro,
+.campo textarea.erro {
+    border-color:
+        var(--cor-erro);
+}
+
+.status-formulario {
+    margin-top:
+        var(--espacamento-medio);
+
+    font-weight:
+        bold;
+}
+
+.status-formulario.sucesso {
+    color:
+        var(--cor-sucesso);
+}
+
+.status-formulario.erro {
+    color:
+        var(--cor-erro);
+}
+
+
+/* =====================================
+   FOCO VISÍVEL / ACESSIBILIDADE
+===================================== */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline:
+        3px solid
+        var(--cor-foco);
+
+    outline-offset:
+        3px;
+}
+
+
+/* =====================================
+   RODAPÉ
+===================================== */
+
+.rodape {
+    margin-top:
+        var(--espacamento-grande);
+
+    padding:
+        var(--espacamento-medio)
+        0;
+
+    background-color:
+        #222222;
+
+    color:
+        var(--cor-texto-claro);
+
+    text-align:
+        center;
+}
+
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (min-width: 768px) {
+
+    .cabecalho-conteudo {
+        flex-direction:
+            row;
+
+        justify-content:
+            space-between;
+
+        align-items:
+            center;
+    }
+
+    .nav {
+        flex-direction:
+            row;
+    }
+
+    .secao-cabecalho {
+        flex-direction:
+            row;
+
+        justify-content:
+            space-between;
+
+        align-items:
+            end;
+    }
+
+    .form-row {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .btn {
+        width:
+            auto;
+    }
 }

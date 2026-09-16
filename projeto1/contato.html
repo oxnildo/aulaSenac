@@ -13,14 +13,14 @@
 
     <link rel="stylesheet" href="css/style.css">
 
-    <script src="js/app.js" defer></script>
+    <script src="js/script.js" defer></script>
 </head>
 
 <body>
 
     <header class="cabecalho">
 
-        <div class="container">
+        <div class="container cabecalho-conteudo">
 
             <h1>Entre em contato</h1>
 
@@ -40,6 +40,7 @@
                 <a
                     class="ativo"
                     href="contato.html"
+                    aria-current="page"
                 >
                     Contato
                 </a>
@@ -53,19 +54,20 @@
 
     <main class="container">
 
-        <section class="secao_contato">
+        <section class="secao">
 
             <h2>Formulário de contato</h2>
 
             <p>
                 Preencha os campos abaixo para
-                enviar sua mensagem.
+                validar sua mensagem.
             </p>
 
 
             <form
                 id="form-contato"
                 class="formulario"
+                novalidate
             >
 
                 <div class="form-row">
@@ -73,16 +75,23 @@
                     <div class="campo">
 
                         <label for="nome">
-                            Nome
+                            Nome *
                         </label>
 
                         <input
                             type="text"
                             id="nome"
                             name="nome"
+                            autocomplete="name"
                             placeholder="Digite seu nome"
+                            aria-describedby="erro-nome"
                             required
                         >
+
+                        <small
+                            id="erro-nome"
+                            class="mensagem-erro"
+                        ></small>
 
                     </div>
 
@@ -90,16 +99,23 @@
                     <div class="campo">
 
                         <label for="email">
-                            E-mail
+                            E-mail *
                         </label>
 
                         <input
                             type="email"
                             id="email"
                             name="email"
+                            autocomplete="email"
                             placeholder="nome@email.com"
+                            aria-describedby="erro-email"
                             required
                         >
+
+                        <small
+                            id="erro-email"
+                            class="mensagem-erro"
+                        ></small>
 
                     </div>
 
@@ -109,7 +125,7 @@
                 <div class="campo">
 
                     <label for="assunto">
-                        Assunto
+                        Assunto *
                     </label>
 
                     <input
@@ -117,8 +133,14 @@
                         id="assunto"
                         name="assunto"
                         placeholder="Informe o assunto"
+                        aria-describedby="erro-assunto"
                         required
                     >
+
+                    <small
+                        id="erro-assunto"
+                        class="mensagem-erro"
+                    ></small>
 
                 </div>
 
@@ -126,7 +148,7 @@
                 <div class="campo">
 
                     <label for="mensagem">
-                        Mensagem
+                        Mensagem *
                     </label>
 
                     <textarea
@@ -134,8 +156,14 @@
                         name="mensagem"
                         rows="6"
                         placeholder="Digite sua mensagem"
+                        aria-describedby="erro-mensagem"
                         required
                     ></textarea>
+
+                    <small
+                        id="erro-mensagem"
+                        class="mensagem-erro"
+                    ></small>
 
                 </div>
 
@@ -148,6 +176,14 @@
                 </button>
 
             </form>
+
+
+            <p
+                id="status-formulario"
+                class="status-formulario"
+                role="status"
+                aria-live="polite"
+            ></p>
 
         </section>
 
@@ -168,4 +204,4 @@
     </footer>
 
 </body>
-</html>    
+</html>

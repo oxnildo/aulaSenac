@@ -4,26 +4,36 @@
 <head>
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <title>Aula 04 - CSS Mobile-First</title>
+    <title>Início - Meu Projeto Web</title>
 
     <link rel="stylesheet" href="css/style.css">
 
-    <script src="js/app.js" defer></script>
+    <script src="js/script.js" defer></script>
 </head>
 
 <body>
 
     <header class="cabecalho">
 
-        <div class="container">
+        <div class="container cabecalho-conteudo">
 
             <h1>Meu Projeto Web</h1>
 
-            <nav class="nav" aria-label="Navegação principal">
+            <nav
+                class="nav"
+                aria-label="Navegação principal"
+            >
 
-                <a class="ativo" href="index.html">
+                <a
+                    class="ativo"
+                    href="index.html"
+                    aria-current="page"
+                >
                     Início
                 </a>
 
@@ -50,106 +60,204 @@
 
             <p>
                 Este projeto está sendo desenvolvido
-                durante as aulas de desenvolvimento web.
+                durante as aulas de Front-end.
             </p>
 
         </section>
 
 
-        <section class="secao">
+        <section
+            id="projetos"
+            class="secao"
+        >
 
-            <h2>O que estamos aprendendo?</h2>
+            <div class="secao-cabecalho">
 
-            <div class="grid-cards">
+                <div>
+                    <p class="tag">Catálogo</p>
+                    <h2>O que estamos aprendendo?</h2>
+                </div>
 
-                <article class="card">
-
-                    <h3>HTML</h3>
-
-                    <p>
-                        Utilizamos HTML para organizar
-                        e estruturar o conteúdo da página.
-                    </p>
-
-                </article>
-
-
-                <article class="card">
-
-                    <h3>CSS</h3>
-
-                    <p>
-                        Utilizamos CSS para trabalhar
-                        cores, tamanhos, espaçamentos
-                        e layouts.
-                    </p>
-
-                </article>
-
-
-                <article class="card">
-
-                    <h3>Responsividade</h3>
-
-                    <p>
-                        Vamos adaptar nosso site para
-                        funcionar em celulares, tablets
-                        e computadores.
-                    </p>
-
-                </article>
+                <span
+                    id="contador-selecionados"
+                    class="contador-projetos"
+                >
+                    0 selecionado(s)
+                </span>
 
             </div>
 
-        </section>
 
-        <section class="secao" id="projetos">
-            <h2>Projetos desenvolvidos</h2>
-            <div class="campo busca">
-                <Label for="busca">
+            <div class="campo-busca">
+
+                <label for="busca">
                     Buscar projeto
-                </Label>
+                </label>
 
-                <input type="search" id="buscar" placeholder="Digite HTML ou CSS">
+                <input
+                    type="search"
+                    id="busca"
+                    placeholder="Digite HTML, CSS ou Responsividade"
+                >
+
             </div>
 
-            <p id="status" role="status" aria-live="polite">
-                3 projetos encontrados
-            </p>
-            <div class="filtros">
 
-                <button type="button" class="btn-filtro ativo" data-filtro="todos">
+            <p
+                id="status"
+                class="status"
+                role="status"
+                aria-live="polite"
+            >
+                4 projetos encontrados.
+            </p>
+
+
+            <div
+                class="filtros"
+                aria-label="Filtros do catálogo"
+            >
+
+                <button
+                    type="button"
+                    class="btn-filtro ativo"
+                    data-filtro="todos"
+                >
                     Todos
                 </button>
 
-                <button type="button" class="btn-filtro" data-filtro="html">
+                <button
+                    type="button"
+                    class="btn-filtro"
+                    data-filtro="html"
+                >
                     HTML
                 </button>
 
-                <button type="button" class="btn-filtro" data-filtro="css">
+                <button
+                    type="button"
+                    class="btn-filtro"
+                    data-filtro="css"
+                >
                     CSS
                 </button>
+
+                <button
+                    type="button"
+                    class="btn-filtro"
+                    data-filtro="responsivo"
+                >
+                    Responsivo
+                </button>
+
             </div>
-            <div id="lista-projeto">
-                <article class="projeto-card" data-categoria="html">
-                <h3>HTML Semantico</h3>
-                <p>
-                    Projeto desenvolvido para praticar a estrutura semantica do HTML.
-                </p>
-            </article>
-            <article class="projeto-card" data-categoria="css">
-                <h3>Box Model</h3>
-                <p>Projeto utilizado para praticar margin, padding, border e contextoi.
-                </p>
-            </article>
-            <article class="projeto-card" data-categoria="css">
-                <h3>Flexbox e grid</h3>
-                <p>
-                </p>
-            </article>
+
+
+            <div
+                id="lista-projetos"
+                class="grid-cards"
+            >
+
+                <article
+                    class="card projeto-card"
+                    data-id="html-semantico"
+                    data-categoria="html"
+                >
+
+                    <h3>HTML Semântico</h3>
+
+                    <p>
+                        Projeto criado para praticar
+                        header, nav, main, section,
+                        article e footer.
+                    </p>
+
+                    <button
+                        type="button"
+                        class="btn-selecionar"
+                        aria-pressed="false"
+                    >
+                        Selecionar
+                    </button>
+
+                </article>
+
+
+                <article
+                    class="card projeto-card"
+                    data-id="box-model"
+                    data-categoria="css"
+                >
+
+                    <h3>Box Model</h3>
+
+                    <p>
+                        Projeto utilizado para praticar
+                        margin, padding, border e content.
+                    </p>
+
+                    <button
+                        type="button"
+                        class="btn-selecionar"
+                        aria-pressed="false"
+                    >
+                        Selecionar
+                    </button>
+
+                </article>
+
+
+                <article
+                    class="card projeto-card"
+                    data-id="flex-grid"
+                    data-categoria="css"
+                >
+
+                    <h3>Flexbox e Grid</h3>
+
+                    <p>
+                        Projeto utilizado para organizar
+                        elementos com Flexbox e CSS Grid.
+                    </p>
+
+                    <button
+                        type="button"
+                        class="btn-selecionar"
+                        aria-pressed="false"
+                    >
+                        Selecionar
+                    </button>
+
+                </article>
+
+
+                <article
+                    class="card projeto-card"
+                    data-id="responsivo"
+                    data-categoria="responsivo"
+                >
+
+                    <h3>Página Responsiva</h3>
+
+                    <p>
+                        Projeto criado utilizando
+                        Mobile-First e Media Queries.
+                    </p>
+
+                    <button
+                        type="button"
+                        class="btn-selecionar"
+                        aria-pressed="false"
+                    >
+                        Selecionar
+                    </button>
+
+                </article>
+
             </div>
 
         </section>
+
 
         <aside class="aviso">
 
@@ -157,7 +265,8 @@
 
             <p>
                 Utilize o DevTools do navegador para
-                testar diferentes tamanhos de tela.
+                testar diferentes tamanhos de tela
+                e acompanhe também o Console.
             </p>
 
         </aside>
@@ -170,8 +279,8 @@
         <div class="container">
 
             <p>
-                Desenvolvido durante a aula de
-                Desenvolvimento Web - SENAC.
+                Desenvolvido durante as aulas
+                de Front-end - SENAC.
             </p>
 
         </div>
@@ -179,5 +288,4 @@
     </footer>
 
 </body>
-
 </html>
